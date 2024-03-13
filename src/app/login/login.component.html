@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="main">{{ sonSecilen }} </div>
+    <button mat-raised-button color="primary" (click)="selectKurban()">Kurban Seç</button>
+
+    <div>
+        <div>
+            <h3>Kalan Kurbanlar </h3>
+            @for (numara of numaralar; track $index) {
+            {{ numara }}
+            }
+        </div>
+        <div>
+            <h3>Kaçan Kurbanlar </h3>
+            @for (numara of tamamlananlar; track $index) {
+            {{ numara }}
+            }
+        </div>
+    </div>
+</div>
